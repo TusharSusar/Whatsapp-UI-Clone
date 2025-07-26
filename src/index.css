@@ -14,3 +14,9 @@
   --color-filter-cap-bg: #262524;
   --color-border-col: rgba(255, 255, 255, .1);
 }
+
+@layer components {
+  .chatlist {
+    @apply min-w-[100px] w-[30%] h-[100%] border border-border-col bg-pri-bg
+  }
+}

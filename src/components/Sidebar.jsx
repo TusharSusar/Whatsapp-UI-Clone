@@ -45,7 +45,7 @@ const Sidebar = () => {
   const { sidebarItem, dispatch } = useContext(SidebarContext);
   return (
     <>
-      <div className="sidebar flex flex-col max-w-[50px] px-3 py-2.5 h-[100%] border-r border-r-border-col bg-[#1D1F1F]">
+      <aside className="sidebar flex flex-col max-w-[50px] px-3 py-2.5 h-[100%] border-r border-r-border-col bg-[#1D1F1F]">
         <ul className="nav-links flex flex-col items-center justify-center border-b border-border-col ">
           <li className="links">
             <button
@@ -319,7 +319,7 @@ const Sidebar = () => {
             </span>
           </div>
         </div>
-      </div>
+      </aside>
     </>
   );
 };
