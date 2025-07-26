@@ -17,6 +17,9 @@
 
 @layer components {
   .chatlist {
-    @apply min-w-[100px] w-[30%] h-[100%] border border-border-col bg-pri-bg
+    @apply min-w-[350px] w-[30%] h-[100%] border border-border-col bg-pri-bg
+  }
+  .chatbox {
+    @apply w-auto md:flex-1 h-[100%] border border-border-col bg-pri-bg 
   }
 }

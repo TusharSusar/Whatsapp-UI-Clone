@@ -2,9 +2,7 @@ import React from 'react'
 
 function ChatList() {
   return (
-    <section className='chatlist'>
-      
-    </section>
+    <section className='chatlist'></section>
   )
 }
 
