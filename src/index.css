@@ -20,7 +20,16 @@
   .main-box {
     @apply min-w-[350px] md:w-[30%] h-[100%] border border-border-col bg-pri-bg
   }
+
   .side-box {
-    @apply min-w-[500px] min-h-full md:flex-1 h-[100%] overflow-hidden border border-border-col bg-pri-bg 
+    @apply min-w-[500px] min-h-full md:flex-1 h-[100%] overflow-hidden border border-border-col bg-pri-bg
+  }
+
+  .sub-heading {
+    @apply text-center text-[12px] mt-4 text-sec-text
+  }
+
+  .default-heading {
+    @apply text-4xl text-center font-light mt-9 text-pri-text
   }
 }

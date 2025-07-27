@@ -45,8 +45,8 @@ const Sidebar = () => {
   const { sidebarItem, dispatch } = useContext(SidebarContext);
   return (
     <>
-      <aside className="sidebar flex flex-col max-w-[50px] px-3 py-2.5 h-[100%] border-r border-r-border-col bg-[#1D1F1F]">
-        <ul className="nav-links flex flex-col items-center justify-center border-b border-border-col ">
+      <aside className="sidebar flex flex-col max-w-[64px] px-3 py-2.5 h-[100%] border-r border-r-border-col bg-[#1D1F1F]">
+        <ul className="nav-links flex flex-col items-center justify-center gap-1 border-b border-border-col ">
           <li className="links">
             <button
               className={`p-2 rounded-full cursor-pointer ${
@@ -57,8 +57,8 @@ const Sidebar = () => {
               {sidebarItem == "CHAT" ? (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="none"
@@ -74,8 +74,8 @@ const Sidebar = () => {
               ) : (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="none"
@@ -101,8 +101,8 @@ const Sidebar = () => {
               {sidebarItem == "STATUS" ? (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="none"
@@ -129,8 +129,8 @@ const Sidebar = () => {
               ) : (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="rgba(255, 255, 255, .6)"
@@ -170,8 +170,8 @@ const Sidebar = () => {
               {sidebarItem == "CHANNELS" ? (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   fill="rgba(255, 255, 255, .6)"
                 >
                   <title>newsletter-outline</title>
@@ -195,8 +195,8 @@ const Sidebar = () => {
               ) : (
                 <svg
                   viewBox="0 0 24 24"
-                  height="20"
-                  width="20"
+                  height="24"
+                  width="24"
                   fill="rgba(255, 255, 255, .6)"
                 >
                   <path
@@ -231,8 +231,8 @@ const Sidebar = () => {
               {sidebarItem == "COMMUNITY" ? (
                 <svg
                   viewBox="0 0 32 32"
-                  height="24"
-                  width="24"
+                  height="32"
+                  width="32"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="#FAFAFA"
@@ -274,8 +274,8 @@ const Sidebar = () => {
               ) : (
                 <svg
                   viewBox="0 0 32 32"
-                  height="24"
-                  width="24"
+                  height="32"
+                  width="32"
                   preserveAspectRatio="xMidYMid meet"
                   class=""
                   fill="rgba(255, 255, 255, .6)"
@@ -322,8 +322,8 @@ const Sidebar = () => {
           <button className="meta-icon">
             <img
               alt="Meta"
-              width={15}
-              height={15}
+              width={20}
+              height={20}
               draggable="false"
               src="https://static.whatsapp.net/rsrc.php/v4/ye/r/W2MDyeo0zkf.png"
             />
@@ -336,9 +336,9 @@ const Sidebar = () => {
               onClick={() => dispatch({ type: "SETTINGS" })}
             >
               {sidebarItem == "SETTINGS" ? (
-                <Settings color="#FAFAFA" size={18} />
+                <Settings color="#FAFAFA" size={20} />
               ) : (
-                <Settings color="rgba(255, 255, 255, .6)" size={18} />
+                <Settings color="rgba(255, 255, 255, .6)" size={20} />
               )}
             </button>
             <button className="profile cursor-pointer" onClick={()=> dispatch({type:"PROFILE"})}>
