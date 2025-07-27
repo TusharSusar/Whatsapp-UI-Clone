@@ -16,6 +16,12 @@ const reducer = (state, action) => {
     case "COMMUNITY":
       return "COMMUNITY";
 
+    case "SETTINGS":
+      return "SETTINGS";
+
+    case "PROFILE":
+      return "PROFILE";
+
     default:
       return state;
   }
