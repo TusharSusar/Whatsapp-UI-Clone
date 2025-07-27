@@ -341,7 +341,7 @@ const Sidebar = () => {
                 <Settings color="rgba(255, 255, 255, .6)" size={18} />
               )}
             </button>
-            <button className="profile">
+            <button className="profile cursor-pointer" onClick={()=> dispatch({type:"PROFILE"})}>
               <img src={dp} alt="" className="w-[22px] h-[22px] rounded-full" />
             </button>
           </div>

@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 
 export const SidebarContext = createContext();
 
@@ -34,5 +34,16 @@ export const SidebarProvider = ({ children }) => {
     <SidebarContext.Provider value={{ sidebarItem, dispatch }}>
       {children}
     </SidebarContext.Provider>
+  );
+};
+
+export const ChatBoxContext = createContext();
+
+export const ChatBoxProvider = ({ children }) => {
+  const [showChatbox, setShowChatBox] = useState(false);
+  return (
+    <ChatBoxProvider value={{ showChatbox, setShowChatBox }}>
+      {children}
+    </ChatBoxProvider>
   );
 };

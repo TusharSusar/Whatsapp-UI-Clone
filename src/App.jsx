@@ -1,10 +1,20 @@
 import { useContext } from "react";
 import Sidebar from "./components/Sidebar";
-import { SidebarContext, SidebarProvider } from "./context/Sidebarcontext";
+import { SidebarContext } from "./context/Sidebarcontext";
 import ChatList from "../pages/ChatList";
 // import ChatBox from "../pages/ChatBox";
 import Status from "../pages/Status";
-import DefaultPage from "../Default Pages/DefaultPage";
+import DefaultPage, {
+  ChannelsDefault,
+  CommunityDefault,
+  ProfileDefault,
+  SettingDefault,
+  StatusDefault,
+} from "../Default Pages/DefaultPage";
+import Channels from "../pages/Channels";
+import Community from "../pages/Community";
+import Settings from "../pages/Settings";
+import Profile from "../pages/Profile";
 
 const App = () => {
   const { sidebarItem } = useContext(SidebarContext);
@@ -18,11 +28,36 @@ const App = () => {
             <DefaultPage />
           </>
         )}
-        {sidebarItem == "STATUS" && (<Status/>)}
-        {sidebarItem == "CHANNELS" && ""}
-        {sidebarItem == "COMMUNITY" && ""}
-        {sidebarItem == "SETTINGS" && ""}
-        {sidebarItem == "PROFILE" && ""}
+        {sidebarItem == "STATUS" && (
+          <>
+            <Status />
+            <StatusDefault />
+          </>
+        )}
+        {sidebarItem == "CHANNELS" && (
+          <>
+            <Channels />
+            <ChannelsDefault />
+          </>
+        )}
+        {sidebarItem == "COMMUNITY" && (
+          <>
+            <Community />
+            <CommunityDefault />
+          </>
+        )}
+        {sidebarItem == "SETTINGS" && (
+          <>
+            <Settings />
+            <SettingDefault />
+          </>
+        )}
+        {sidebarItem == "PROFILE" && (
+          <>
+            <Profile />
+            <ProfileDefault />
+          </>
+        )}
       </main>
     </>
   );
