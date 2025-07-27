@@ -106,7 +106,7 @@ export function ChannelsDefault() {
               ></path>
             </svg>
           </span>
-          <h1 className="default-heading">Discover CHannels</h1>
+          <h1 className="default-heading">Discover Channels</h1>
           <div className="sub-heading">
             Entertainment, sports, news, lifestyle, people and more. Follow the
             channels that interest you

@@ -336,12 +336,12 @@ const Sidebar = () => {
               onClick={() => dispatch({ type: "SETTINGS" })}
             >
               {sidebarItem == "SETTINGS" ? (
-                <Settings color="#FAFAFA" size={20} />
+                <Settings color="#FAFAFA" size={22} strokeWidth={2.5} />
               ) : (
-                <Settings color="rgba(255, 255, 255, .6)" size={20} />
+                <Settings color="rgba(255, 255, 255, .6)" size={22} />
               )}
             </button>
-            <button className="profile cursor-pointer" onClick={()=> dispatch({type:"PROFILE"})}>
+            <button className={`profile p-1 rounded-full cursor-pointer ${sidebarItem == "PROFILE" ? "bg-icon-hover-bg" : "bg-transparent"}`} onClick={()=> dispatch({type:"PROFILE"})}>
               <img src={dp} alt="" className="w-[22px] h-[22px] rounded-full" />
             </button>
           </div>
