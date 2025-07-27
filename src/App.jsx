@@ -2,7 +2,9 @@ import { useContext } from "react";
 import Sidebar from "./components/Sidebar";
 import { SidebarContext, SidebarProvider } from "./context/Sidebarcontext";
 import ChatList from "../pages/ChatList";
-import ChatBox from "../pages/ChatBox";
+// import ChatBox from "../pages/ChatBox";
+import Status from "../pages/Status";
+import DefaultPage from "../Default Pages/DefaultPage";
 
 const App = () => {
   const { sidebarItem } = useContext(SidebarContext);
@@ -13,10 +15,10 @@ const App = () => {
         {sidebarItem == "CHAT" && (
           <>
             <ChatList />
-            <ChatBox />
+            <DefaultPage />
           </>
         )}
-        {sidebarItem == "STATUS" && ""}
+        {sidebarItem == "STATUS" && (<Status/>)}
         {sidebarItem == "CHANNELS" && ""}
         {sidebarItem == "COMMUNITY" && ""}
         {sidebarItem == "SETTINGS" && ""}

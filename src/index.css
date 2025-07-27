@@ -9,6 +9,7 @@
   --color-sidebar-bg: #262524;
   --color-icon-hover-bg: #282929;
   --color-chat-hover-bg: #2d2e2e;
+  --color-btn-green: #21C063;
   --color-notification-bg: #21bf63;
   --color-notification2-bg: #262524;
   --color-filter-cap-bg: #262524;
@@ -16,10 +17,10 @@
 }
 
 @layer components {
-  .chatlist {
-    @apply min-w-[350px] w-[30%] h-[100%] border border-border-col bg-pri-bg
+  .main-box {
+    @apply min-w-[350px] md:w-[30%] h-[100%] border border-border-col bg-pri-bg
   }
-  .chatbox {
-    @apply w-auto md:flex-1 h-[100%] border border-border-col bg-pri-bg 
+  .side-box {
+    @apply min-w-[500px] min-h-full md:flex-1 h-[100%] overflow-hidden border border-border-col bg-pri-bg 
   }
 }

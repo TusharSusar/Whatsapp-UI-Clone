@@ -2,9 +2,9 @@ import React from 'react'
 
 function Status() {
   return (
-    <div>
-      
-    </div>
+    <section className='main-box'>
+      <h1 className='text-white'>Status</h1>
+    </section>
   )
 }
 

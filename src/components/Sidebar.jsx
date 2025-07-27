@@ -63,7 +63,7 @@ const Sidebar = () => {
                   class=""
                   fill="none"
                 >
-                  <title>chat-filled-refreshed</title>
+                  <title>Chats-Active</title>
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -80,7 +80,7 @@ const Sidebar = () => {
                   class=""
                   fill="none"
                 >
-                  <title>chat-filled-refreshed</title>
+                  <title>Chats</title>
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
