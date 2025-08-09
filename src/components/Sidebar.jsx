@@ -49,7 +49,7 @@ const Sidebar = () => {
         <ul className="nav-links flex flex-col items-center justify-center gap-1 border-b border-border-col ">
           <li className="links">
             <button
-              className={`p-2 rounded-full cursor-pointer ${
+              className={`p-2 rounded-full cursor-pointer hover:bg-icon-hover-bg ${
                 sidebarItem == "CHAT" ? "bg-icon-hover-bg" : "bg-transparent"
               }`}
               onClick={() => dispatch({ type: "CHAT" })}
@@ -93,7 +93,7 @@ const Sidebar = () => {
           </li>
           <li className="links">
             <button
-              className={`p-2 rounded-full cursor-pointer ${
+              className={`p-2 rounded-full cursor-pointer hover:bg-icon-hover-bg ${
                 sidebarItem == "STATUS" ? "bg-icon-hover-bg" : "bg-transparent"
               }`}
               onClick={() => dispatch({ type: "STATUS" })}
@@ -160,7 +160,7 @@ const Sidebar = () => {
           </li>
           <li className="links">
             <button
-              className={`p-2 rounded-full cursor-pointer ${
+              className={`p-2 rounded-full cursor-pointer hover:bg-icon-hover-bg ${
                 sidebarItem == "CHANNELS"
                   ? "bg-icon-hover-bg"
                   : "bg-transparent"
@@ -221,7 +221,7 @@ const Sidebar = () => {
           </li>
           <li className="links">
             <button
-              className={`p-2 mb-2.5 rounded-full cursor-pointer ${
+              className={`p-2 mb-2.5 rounded-full cursor-pointer hover:bg-icon-hover-bg ${
                 sidebarItem == "COMMUNITY"
                   ? "bg-icon-hover-bg"
                   : "bg-transparent"
@@ -330,7 +330,7 @@ const Sidebar = () => {
           </button>
           <div className="settings flex flex-col items-center gap-4">
             <button
-              className={`setting p-2 rounded-full cursor-pointer ${
+              className={`setting p-2 rounded-full cursor-pointer hover:bg-icon-hover-bg ${
                 sidebarItem == "SETTINGS" ? "bg-icon-hover-bg" : "bg-transparent"
               }`}
               onClick={() => dispatch({ type: "SETTINGS" })}
@@ -342,7 +342,7 @@ const Sidebar = () => {
               )}
             </button>
             <button className={`profile p-1 rounded-full cursor-pointer ${sidebarItem == "PROFILE" ? "bg-icon-hover-bg" : "bg-transparent"}`} onClick={()=> dispatch({type:"PROFILE"})}>
-              <img src={dp} alt="" className="w-[22px] h-[22px] rounded-full" />
+              <img src={dp} alt="Profile" draggable={false} className="w-[22px] h-[22px] rounded-full" />
             </button>
           </div>
         </div>

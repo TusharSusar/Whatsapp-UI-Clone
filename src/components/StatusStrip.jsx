@@ -4,13 +4,13 @@ function StatusStrip({ ele, key }) {
   return (
     <div
       key={key}
-      className="mystatus flex items-center gap-4 py-3.5 px-2 cursor-pointer rounded-[8px] hover:bg-chat-hover-bg"
+      className="mystatus flex items-center gap-4 py-2.5 px-2 cursor-pointer rounded-[8px] hover:bg-chat-hover-bg"
     >
       <span className={`rounded-full p-1 ${!ele.viewed && 'border border-green-400'}`}>
         <img
           src={ele.imageUrl}
           alt="MyPic"
-          className="w-10 h-10 rounded-full relative"
+          className="w-10 h-10 rounded-full blur-[1px] relative"
         />
       </span>
       {/* <div className="plus absolute right-0  bg-green-400 rounded-full">+</div> */}

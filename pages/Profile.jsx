@@ -24,12 +24,12 @@ function Profile() {
   };
 
   return (
-    <section className="main-box px-6">
+    <section className="main-box px-6 select-none">
       <header className="w-full  py-3">
         <h1 className="text-pri-text text-[20px] font-semibold">Profile</h1>
       </header>
       <div className="profile-img flex justify-center my-10">
-        <img src={dp} alt="" className="w-32 h-32 rounded-full object-cover" />
+        <img src={dp} alt="" draggable={false} className="w-32 h-32 rounded-full object-cover" />
       </div>
       <div className="name-section px-3">
         <div className="name-heading text-sec-text">Your Name</div>

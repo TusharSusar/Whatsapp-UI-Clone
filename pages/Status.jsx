@@ -1,5 +1,5 @@
-import { CirclePlus, EllipsisVertical, Plus } from "lucide-react";
-import React, { useEffect, useReducer, useState } from "react";
+import { CirclePlus, EllipsisVertical, Plus, X } from "lucide-react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import dp from "../src/assets/Profilepic.jpeg";
 import StatusStrip from "../src/components/StatusStrip";
 import { data } from "../data/statusData";
@@ -19,6 +19,7 @@ const reducer = (state, action) => {
 
 function Status() {
   const [statusIcon, statusDispatch] = useReducer(reducer, "NONE");
+  const [showStatus, setStatus] = useState(false);
 
   const [udata, setData] = useState([]);
   const [uviewed, setViewed] = useState([]);
@@ -72,7 +73,9 @@ function Status() {
         <div className="mystatus flex items-center gap-4 mt-3">
           <div className="relative">
             <img src={dp} alt="MyPic" className="w-10 h-10 rounded-full" />
-            <div className="plus absolute bottom-0 right-0 rounded-full bg-green-400"><Plus color="#FAFAFA" size={16} strokeWidth={2.5}/></div>
+            <div className="plus absolute bottom-0 right-0 rounded-full bg-green-400">
+              <Plus color="#FAFAFA" size={16} strokeWidth={2.5} />
+            </div>
           </div>
 
           <div className="status textcontent flex-1">
@@ -89,7 +92,9 @@ function Status() {
         {/* List of Statuses */}
         <div className="flex flex-col">
           {udata?.map((ele, index) => (
-            <StatusStrip key={index} ele={ele} />
+            <span key={index} onClick={() => setStatus(true)}>
+              <StatusStrip ele={ele} />
+            </span>
           ))}
         </div>
         <div className="labels px-2 py-6 text-green-400 text-sm font-semibold">
@@ -99,7 +104,9 @@ function Status() {
         {/* List of Statuses */}
         <div className="flex flex-col">
           {uviewed?.map((ele, index) => (
-            <StatusStrip key={index} ele={ele} />
+            <span key={index} onClick={() => setStatus(true)}>
+              <StatusStrip ele={ele} />
+            </span>
           ))}
         </div>
         <div className="labels px-4 py-6 text-green-400 text-sm font-semibold flex justify-between">
@@ -111,11 +118,16 @@ function Status() {
             {showMuted ? "hide" : "show"}
           </span>
         </div>
+        {showStatus && <DetailedStatus setStatus={setStatus} />}
 
         {/* List of Statuses */}
         <div className="flex flex-col">
           {showMuted &&
-            umuted?.map((ele, index) => <StatusStrip key={index} ele={ele} />)}
+            umuted?.map((ele, index) => (
+              <span key={index} onClick={() => setStatus(true)}>
+                <StatusStrip ele={ele} />
+              </span>
+            ))}
         </div>
       </div>
     </section>
@@ -123,3 +135,13 @@ function Status() {
 }
 
 export default Status;
+
+export const DetailedStatus = ({setStatus}) => {
+  return (
+    <>
+      <div className="statusdetail fixed top-0 left-0 z-50 w-full h-screen bg-[rgba(0,0,0,0.8)]">
+        <span className="fixed right-0 cursor-pointer m-3" onClick={()=> setStatus(false)} ><X color="#FAFAFA" strokeWidth={3}/></span>
+      </div>
+    </>
+  );
+};

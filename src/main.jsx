@@ -7,7 +7,9 @@ import { SidebarProvider } from "./context/Sidebarcontext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <SidebarProvider>
-      <App />
+      {/* <StatusProvider> */}
+        <App />
+      {/* </StatusProvider> */}
     </SidebarProvider>
   </StrictMode>
 );

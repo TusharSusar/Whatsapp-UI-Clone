@@ -47,3 +47,14 @@ export const ChatBoxProvider = ({ children }) => {
     </ChatBoxProvider>
   );
 };
+
+// export const StatusContext = createContext();
+
+// export const StatusProvider = ({ children }) => {
+//   const [showStatus, setStatus] = useState(false);
+//   return (
+//     <StatusProvider value={{ showStatus, setStatus }}>
+//       {children}
+//     </StatusProvider>
+//   );
+// };

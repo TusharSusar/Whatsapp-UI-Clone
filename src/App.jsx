@@ -20,7 +20,7 @@ const App = () => {
   const { sidebarItem } = useContext(SidebarContext);
   return (
     <>
-      <main className="contect flex w-full h-[100dvh] bg-pri-bg">
+      <main className="contect flex w-full h-dvh bg-pri-bg">
         <Sidebar />
         {sidebarItem == "CHAT" && (
           <>

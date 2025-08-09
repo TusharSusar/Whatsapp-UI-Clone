@@ -4,10 +4,10 @@ import { LockKeyhole } from "lucide-react";
 
 function DefaultPage() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
-          <img className="w-[300px] h-[180px]" alt="" src={defaultImage} />
+          <img className="w-[300px] h-[180px]" draggable={false} alt="" src={defaultImage} />
           <h1 className="default-heading">Download WhatsApp For Windows</h1>
           <div className="sub-heading">
             Make calls, share your screen and get a faster experience when you
@@ -39,7 +39,7 @@ export default DefaultPage;
 
 export function StatusDefault() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
           <span>
@@ -87,7 +87,7 @@ export function StatusDefault() {
 }
 export function ChannelsDefault() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
           <span>
@@ -122,7 +122,7 @@ export function ChannelsDefault() {
 }
 export function CommunityDefault() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
           <span>
@@ -189,7 +189,7 @@ export function CommunityDefault() {
 }
 export function SettingDefault() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
           <span>
@@ -222,7 +222,7 @@ export function SettingDefault() {
 }
 export function ProfileDefault() {
   return (
-    <section className="side-box flex justify-center">
+    <section className="side-box flex justify-center select-none" draggable={false}>
       <div className="default-parent w-[80%] h-full flex items-center justify-center relative">
         <div className="default-content w-full flex flex-col items-center">
           <span>
